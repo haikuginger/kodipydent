@@ -39,4 +39,4 @@ Here's the full signature of the method to create your API:
 
 .. code:: python
 
-    Kodi(hostname[, port])
+    Kodi(hostname[, port=8080])
