@@ -1,0 +1,3285 @@
+{
+    "objects": {
+        "Application": {
+            "actions": {
+                "SetMute": {
+                    "variables": {
+                        "mute": {
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "Application.SetMute",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Toggle mute/unmute",
+                    "method": "POST"
+                },
+                "SetVolume": {
+                    "variables": {
+                        "volume": {
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "Application.SetVolume",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Set the current volume",
+                    "method": "POST"
+                },
+                "Quit": {
+                    "variables": {
+                        "method": {
+                            "value": "Application.Quit",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Quit application",
+                    "method": "POST"
+                },
+                "GetProperties": {
+                    "variables": {
+                        "properties": {
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "Application.GetProperties",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieves the values of the given properties",
+                    "method": "POST"
+                }
+            }
+        },
+        "Textures": {
+            "actions": {
+                "GetTextures": {
+                    "variables": {
+                        "properties": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "filter": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "Textures.GetTextures",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieve all textures",
+                    "method": "POST"
+                },
+                "RemoveTexture": {
+                    "variables": {
+                        "textureid": {
+                            "type": "json_rpc",
+                            "description": "Texture database identifier"
+                        },
+                        "method": {
+                            "value": "Textures.RemoveTexture",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Remove the specified texture",
+                    "method": "POST"
+                }
+            }
+        },
+        "System": {
+            "actions": {
+                "Suspend": {
+                    "variables": {
+                        "method": {
+                            "value": "System.Suspend",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Suspends the system running Kodi",
+                    "method": "POST"
+                },
+                "Shutdown": {
+                    "variables": {
+                        "method": {
+                            "value": "System.Shutdown",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Shuts the system running Kodi down",
+                    "method": "POST"
+                },
+                "Hibernate": {
+                    "variables": {
+                        "method": {
+                            "value": "System.Hibernate",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Puts the system running Kodi into hibernate mode",
+                    "method": "POST"
+                },
+                "EjectOpticalDrive": {
+                    "variables": {
+                        "method": {
+                            "value": "System.EjectOpticalDrive",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Ejects or closes the optical disc drive (if available)",
+                    "method": "POST"
+                },
+                "GetProperties": {
+                    "variables": {
+                        "properties": {
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "System.GetProperties",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieves the values of the given properties",
+                    "method": "POST"
+                },
+                "Reboot": {
+                    "variables": {
+                        "method": {
+                            "value": "System.Reboot",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Reboots the system running Kodi",
+                    "method": "POST"
+                }
+            }
+        },
+        "GUI": {
+            "actions": {
+                "GetStereoscopicModes": {
+                    "variables": {
+                        "method": {
+                            "value": "GUI.GetStereoscopicModes",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Returns the supported stereoscopic modes of the GUI",
+                    "method": "POST"
+                },
+                "ActivateWindow": {
+                    "variables": {
+                        "parameters": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "GUI.ActivateWindow",
+                            "type": "json_rpc"
+                        },
+                        "window": {
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Activates the given window",
+                    "method": "POST"
+                },
+                "GetProperties": {
+                    "variables": {
+                        "properties": {
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "GUI.GetProperties",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieves the values of the given properties",
+                    "method": "POST"
+                },
+                "ShowNotification": {
+                    "variables": {
+                        "message": {
+                            "type": "json_rpc"
+                        },
+                        "displaytime": {
+                            "optional": true,
+                            "value": 5000,
+                            "type": "json_rpc",
+                            "description": "The time in milliseconds the notification will be visible"
+                        },
+                        "image": {
+                            "optional": true,
+                            "value": "",
+                            "type": "json_rpc"
+                        },
+                        "title": {
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "GUI.ShowNotification",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Shows a GUI notification",
+                    "method": "POST"
+                },
+                "SetStereoscopicMode": {
+                    "variables": {
+                        "mode": {
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "GUI.SetStereoscopicMode",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Sets the stereoscopic mode of the GUI to the given mode",
+                    "method": "POST"
+                },
+                "SetFullscreen": {
+                    "variables": {
+                        "method": {
+                            "value": "GUI.SetFullscreen",
+                            "type": "json_rpc"
+                        },
+                        "fullscreen": {
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Toggle fullscreen/GUI",
+                    "method": "POST"
+                }
+            }
+        },
+        "Favourites": {
+            "actions": {
+                "AddFavourite": {
+                    "variables": {
+                        "thumbnail": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "type": {
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "Favourites.AddFavourite",
+                            "type": "json_rpc"
+                        },
+                        "windowparameter": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "path": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc",
+                            "description": "Required for media and script favourites types"
+                        },
+                        "title": {
+                            "type": "json_rpc"
+                        },
+                        "window": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc",
+                            "description": "Required for window favourite type"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Add a favourite with the given details",
+                    "method": "POST"
+                },
+                "GetFavourites": {
+                    "variables": {
+                        "properties": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "type": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "Favourites.GetFavourites",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieve all favourites",
+                    "method": "POST"
+                }
+            }
+        },
+        "Player": {
+            "actions": {
+                "Seek": {
+                    "variables": {
+                        "value": {
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "Player.Seek",
+                            "type": "json_rpc"
+                        },
+                        "playerid": {
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Seek through the playing item",
+                    "method": "POST"
+                },
+                "SetShuffle": {
+                    "variables": {
+                        "method": {
+                            "value": "Player.SetShuffle",
+                            "type": "json_rpc"
+                        },
+                        "shuffle": {
+                            "type": "json_rpc"
+                        },
+                        "playerid": {
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Shuffle/Unshuffle items in the player",
+                    "method": "POST"
+                },
+                "Rotate": {
+                    "variables": {
+                        "value": {
+                            "optional": true,
+                            "value": "clockwise",
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "Player.Rotate",
+                            "type": "json_rpc"
+                        },
+                        "playerid": {
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Rotates current picture",
+                    "method": "POST"
+                },
+                "SetRepeat": {
+                    "variables": {
+                        "repeat": {
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "Player.SetRepeat",
+                            "type": "json_rpc"
+                        },
+                        "playerid": {
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Set the repeat mode of the player",
+                    "method": "POST"
+                },
+                "GetActivePlayers": {
+                    "variables": {
+                        "method": {
+                            "value": "Player.GetActivePlayers",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Returns all active players",
+                    "method": "POST"
+                },
+                "Zoom": {
+                    "variables": {
+                        "zoom": {
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "Player.Zoom",
+                            "type": "json_rpc"
+                        },
+                        "playerid": {
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Zoom current picture",
+                    "method": "POST"
+                },
+                "Stop": {
+                    "variables": {
+                        "method": {
+                            "value": "Player.Stop",
+                            "type": "json_rpc"
+                        },
+                        "playerid": {
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Stops playback",
+                    "method": "POST"
+                },
+                "PlayPause": {
+                    "variables": {
+                        "play": {
+                            "optional": true,
+                            "value": "toggle",
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "Player.PlayPause",
+                            "type": "json_rpc"
+                        },
+                        "playerid": {
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Pauses or unpause playback and returns the new state",
+                    "method": "POST"
+                },
+                "SetSpeed": {
+                    "variables": {
+                        "method": {
+                            "value": "Player.SetSpeed",
+                            "type": "json_rpc"
+                        },
+                        "speed": {
+                            "type": "json_rpc"
+                        },
+                        "playerid": {
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Set the speed of the current playback",
+                    "method": "POST"
+                },
+                "GetPlayers": {
+                    "variables": {
+                        "media": {
+                            "optional": true,
+                            "value": "all",
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "Player.GetPlayers",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Get a list of available players",
+                    "method": "POST"
+                },
+                "SetPartymode": {
+                    "variables": {
+                        "partymode": {
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "Player.SetPartymode",
+                            "type": "json_rpc"
+                        },
+                        "playerid": {
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Turn partymode on or off",
+                    "method": "POST"
+                },
+                "GetProperties": {
+                    "variables": {
+                        "properties": {
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "Player.GetProperties",
+                            "type": "json_rpc"
+                        },
+                        "playerid": {
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieves the values of the given properties",
+                    "method": "POST"
+                },
+                "GetItem": {
+                    "variables": {
+                        "properties": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "Player.GetItem",
+                            "type": "json_rpc"
+                        },
+                        "playerid": {
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieves the currently played item",
+                    "method": "POST"
+                },
+                "Open": {
+                    "variables": {
+                        "item": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "options": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "Player.Open",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Start playback of either the playlist with the given ID, a slideshow with the pictures from the given directory or a single file or an item from the database.",
+                    "method": "POST"
+                },
+                "SetSubtitle": {
+                    "variables": {
+                        "subtitle": {
+                            "type": "json_rpc"
+                        },
+                        "enable": {
+                            "optional": true,
+                            "value": false,
+                            "type": "json_rpc",
+                            "description": "Whether to enable subtitles to be displayed after setting the new subtitle"
+                        },
+                        "method": {
+                            "value": "Player.SetSubtitle",
+                            "type": "json_rpc"
+                        },
+                        "playerid": {
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Set the subtitle displayed by the player",
+                    "method": "POST"
+                },
+                "Move": {
+                    "variables": {
+                        "direction": {
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "Player.Move",
+                            "type": "json_rpc"
+                        },
+                        "playerid": {
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "If picture is zoomed move viewport left/right/up/down otherwise skip previous/next",
+                    "method": "POST"
+                },
+                "GoTo": {
+                    "variables": {
+                        "method": {
+                            "value": "Player.GoTo",
+                            "type": "json_rpc"
+                        },
+                        "to": {
+                            "type": "json_rpc"
+                        },
+                        "playerid": {
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Go to previous/next/specific item in the playlist",
+                    "method": "POST"
+                },
+                "SetAudioStream": {
+                    "variables": {
+                        "stream": {
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "Player.SetAudioStream",
+                            "type": "json_rpc"
+                        },
+                        "playerid": {
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Set the audio stream played by the player",
+                    "method": "POST"
+                }
+            }
+        },
+        "Settings": {
+            "actions": {
+                "GetSettingValue": {
+                    "variables": {
+                        "setting": {
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "Settings.GetSettingValue",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieves the value of a setting",
+                    "method": "POST"
+                },
+                "SetSettingValue": {
+                    "variables": {
+                        "value": {
+                            "type": "json_rpc"
+                        },
+                        "setting": {
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "Settings.SetSettingValue",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Changes the value of a setting",
+                    "method": "POST"
+                },
+                "ResetSettingValue": {
+                    "variables": {
+                        "setting": {
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "Settings.ResetSettingValue",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Resets the value of a setting",
+                    "method": "POST"
+                },
+                "GetSections": {
+                    "variables": {
+                        "properties": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "level": {
+                            "optional": true,
+                            "value": "standard",
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "Settings.GetSections",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieves all setting sections",
+                    "method": "POST"
+                },
+                "GetSettings": {
+                    "variables": {
+                        "filter": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "level": {
+                            "optional": true,
+                            "value": "standard",
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "Settings.GetSettings",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieves all settings",
+                    "method": "POST"
+                },
+                "GetCategories": {
+                    "variables": {
+                        "properties": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "section": {
+                            "optional": true,
+                            "value": "",
+                            "type": "json_rpc"
+                        },
+                        "level": {
+                            "optional": true,
+                            "value": "standard",
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "Settings.GetCategories",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieves all setting categories",
+                    "method": "POST"
+                }
+            }
+        },
+        "VideoLibrary": {
+            "actions": {
+                "GetTVShowDetails": {
+                    "variables": {
+                        "properties": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "tvshowid": {
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "VideoLibrary.GetTVShowDetails",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieve details about a specific tv show",
+                    "method": "POST"
+                },
+                "SetMusicVideoDetails": {
+                    "variables": {
+                        "year": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "album": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "fanart": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "resume": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "art": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "VideoLibrary.SetMusicVideoDetails",
+                            "type": "json_rpc"
+                        },
+                        "tag": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "track": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "title": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "genre": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "director": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "playcount": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "thumbnail": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "studio": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "artist": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "lastplayed": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "plot": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "runtime": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc",
+                            "description": "Runtime in seconds"
+                        },
+                        "musicvideoid": {
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Update the given music video with the given details",
+                    "method": "POST"
+                },
+                "GetSeasons": {
+                    "variables": {
+                        "properties": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "sort": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "tvshowid": {
+                            "type": "json_rpc"
+                        },
+                        "limits": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "VideoLibrary.GetSeasons",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieve all tv seasons",
+                    "method": "POST"
+                },
+                "RemoveMovie": {
+                    "variables": {
+                        "movieid": {
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "VideoLibrary.RemoveMovie",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Removes the given movie from the library",
+                    "method": "POST"
+                },
+                "SetMovieDetails": {
+                    "variables": {
+                        "year": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "originaltitle": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "plotoutline": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "sorttitle": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "rating": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "imdbnumber": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "art": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "votes": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "director": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "studio": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "trailer": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "top250": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "lastplayed": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "thumbnail": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "movieid": {
+                            "type": "json_rpc"
+                        },
+                        "plot": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "set": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "VideoLibrary.SetMovieDetails",
+                            "type": "json_rpc"
+                        },
+                        "tag": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "tagline": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "title": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "writer": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "showlink": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "genre": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "country": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "playcount": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "resume": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "mpaa": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "fanart": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "runtime": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc",
+                            "description": "Runtime in seconds"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Update the given movie with the given details",
+                    "method": "POST"
+                },
+                "RemoveEpisode": {
+                    "variables": {
+                        "episodeid": {
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "VideoLibrary.RemoveEpisode",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Removes the given episode from the library",
+                    "method": "POST"
+                },
+                "GetMusicVideos": {
+                    "variables": {
+                        "properties": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "sort": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "filter": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "limits": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "VideoLibrary.GetMusicVideos",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieve all music videos",
+                    "method": "POST"
+                },
+                "GetMovieSetDetails": {
+                    "variables": {
+                        "properties": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "movies": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "setid": {
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "VideoLibrary.GetMovieSetDetails",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieve details about a specific movie set",
+                    "method": "POST"
+                },
+                "GetMovies": {
+                    "variables": {
+                        "properties": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "sort": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "filter": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "limits": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "VideoLibrary.GetMovies",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieve all movies",
+                    "method": "POST"
+                },
+                "SetMovieSetDetails": {
+                    "variables": {
+                        "art": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "VideoLibrary.SetMovieSetDetails",
+                            "type": "json_rpc"
+                        },
+                        "setid": {
+                            "type": "json_rpc"
+                        },
+                        "title": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Update the given movie set with the given details",
+                    "method": "POST"
+                },
+                "GetEpisodeDetails": {
+                    "variables": {
+                        "properties": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "episodeid": {
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "VideoLibrary.GetEpisodeDetails",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieve details about a specific tv show episode",
+                    "method": "POST"
+                },
+                "RemoveTVShow": {
+                    "variables": {
+                        "tvshowid": {
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "VideoLibrary.RemoveTVShow",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Removes the given tv show from the library",
+                    "method": "POST"
+                },
+                "GetMovieSets": {
+                    "variables": {
+                        "properties": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "sort": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "limits": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "VideoLibrary.GetMovieSets",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieve all movie sets",
+                    "method": "POST"
+                },
+                "Clean": {
+                    "variables": {
+                        "showdialogs": {
+                            "optional": true,
+                            "value": true,
+                            "type": "json_rpc",
+                            "description": "Whether or not to show the progress bar or any other GUI dialog"
+                        },
+                        "method": {
+                            "value": "VideoLibrary.Clean",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Cleans the video library from non-existent items",
+                    "method": "POST"
+                },
+                "SetEpisodeDetails": {
+                    "variables": {
+                        "thumbnail": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "season": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "episodeid": {
+                            "type": "json_rpc"
+                        },
+                        "originaltitle": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "fanart": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "rating": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "VideoLibrary.SetEpisodeDetails",
+                            "type": "json_rpc"
+                        },
+                        "art": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "firstaired": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "runtime": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc",
+                            "description": "Runtime in seconds"
+                        },
+                        "productioncode": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "writer": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "votes": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "director": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "playcount": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "resume": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "episode": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "plot": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "title": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "lastplayed": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Update the given episode with the given details",
+                    "method": "POST"
+                },
+                "RemoveMusicVideo": {
+                    "variables": {
+                        "method": {
+                            "value": "VideoLibrary.RemoveMusicVideo",
+                            "type": "json_rpc"
+                        },
+                        "musicvideoid": {
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Removes the given music video from the library",
+                    "method": "POST"
+                },
+                "SetSeasonDetails": {
+                    "variables": {
+                        "art": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "VideoLibrary.SetSeasonDetails",
+                            "type": "json_rpc"
+                        },
+                        "seasonid": {
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Update the given season with the given details",
+                    "method": "POST"
+                },
+                "GetSeasonDetails": {
+                    "variables": {
+                        "properties": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "VideoLibrary.GetSeasonDetails",
+                            "type": "json_rpc"
+                        },
+                        "seasonid": {
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieve details about a specific tv show season",
+                    "method": "POST"
+                },
+                "SetTVShowDetails": {
+                    "variables": {
+                        "premiered": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "originaltitle": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "episodeguide": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "sorttitle": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "fanart": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "rating": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "tvshowid": {
+                            "type": "json_rpc"
+                        },
+                        "tag": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "imdbnumber": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "art": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "VideoLibrary.SetTVShowDetails",
+                            "type": "json_rpc"
+                        },
+                        "studio": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "genre": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "votes": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "playcount": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "thumbnail": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "mpaa": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "plot": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "title": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "lastplayed": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Update the given tvshow with the given details",
+                    "method": "POST"
+                },
+                "GetRecentlyAddedMusicVideos": {
+                    "variables": {
+                        "properties": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "sort": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "limits": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "VideoLibrary.GetRecentlyAddedMusicVideos",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieve all recently added music videos",
+                    "method": "POST"
+                },
+                "GetMusicVideoDetails": {
+                    "variables": {
+                        "properties": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "VideoLibrary.GetMusicVideoDetails",
+                            "type": "json_rpc"
+                        },
+                        "musicvideoid": {
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieve details about a specific music video",
+                    "method": "POST"
+                },
+                "GetGenres": {
+                    "variables": {
+                        "properties": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "sort": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "type": {
+                            "type": "json_rpc"
+                        },
+                        "limits": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "VideoLibrary.GetGenres",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieve all genres",
+                    "method": "POST"
+                },
+                "Scan": {
+                    "variables": {
+                        "showdialogs": {
+                            "optional": true,
+                            "value": true,
+                            "type": "json_rpc",
+                            "description": "Whether or not to show the progress bar or any other GUI dialog"
+                        },
+                        "method": {
+                            "value": "VideoLibrary.Scan",
+                            "type": "json_rpc"
+                        },
+                        "directory": {
+                            "optional": true,
+                            "value": "",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Scans the video sources for new library items",
+                    "method": "POST"
+                },
+                "GetEpisodes": {
+                    "variables": {
+                        "season": {
+                            "optional": true,
+                            "value": -1,
+                            "type": "json_rpc"
+                        },
+                        "properties": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "VideoLibrary.GetEpisodes",
+                            "type": "json_rpc"
+                        },
+                        "filter": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "sort": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "tvshowid": {
+                            "optional": true,
+                            "value": -1,
+                            "type": "json_rpc"
+                        },
+                        "limits": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieve all tv show episodes",
+                    "method": "POST"
+                },
+                "Export": {
+                    "variables": {
+                        "options": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "VideoLibrary.Export",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Exports all items from the video library",
+                    "method": "POST"
+                },
+                "GetRecentlyAddedMovies": {
+                    "variables": {
+                        "properties": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "sort": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "limits": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "VideoLibrary.GetRecentlyAddedMovies",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieve all recently added movies",
+                    "method": "POST"
+                },
+                "GetTVShows": {
+                    "variables": {
+                        "properties": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "sort": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "filter": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "limits": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "VideoLibrary.GetTVShows",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieve all tv shows",
+                    "method": "POST"
+                },
+                "GetRecentlyAddedEpisodes": {
+                    "variables": {
+                        "properties": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "sort": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "limits": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "VideoLibrary.GetRecentlyAddedEpisodes",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieve all recently added tv episodes",
+                    "method": "POST"
+                },
+                "GetMovieDetails": {
+                    "variables": {
+                        "properties": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "movieid": {
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "VideoLibrary.GetMovieDetails",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieve details about a specific movie",
+                    "method": "POST"
+                }
+            }
+        },
+        "PVR": {
+            "actions": {
+                "Record": {
+                    "variables": {
+                        "record": {
+                            "optional": true,
+                            "value": "toggle",
+                            "type": "json_rpc"
+                        },
+                        "channel": {
+                            "optional": true,
+                            "value": "current",
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "PVR.Record",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Toggle recording of a channel",
+                    "method": "POST"
+                },
+                "GetRecordings": {
+                    "variables": {
+                        "properties": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "limits": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "PVR.GetRecordings",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieves the recordings",
+                    "method": "POST"
+                },
+                "GetBroadcasts": {
+                    "variables": {
+                        "properties": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "limits": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "channelid": {
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "PVR.GetBroadcasts",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieves the program of a specific channel",
+                    "method": "POST"
+                },
+                "GetChannelDetails": {
+                    "variables": {
+                        "properties": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "channelid": {
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "PVR.GetChannelDetails",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieves the details of a specific channel",
+                    "method": "POST"
+                },
+                "GetRecordingDetails": {
+                    "variables": {
+                        "properties": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "PVR.GetRecordingDetails",
+                            "type": "json_rpc"
+                        },
+                        "recordingid": {
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieves the details of a specific recording",
+                    "method": "POST"
+                },
+                "GetTimerDetails": {
+                    "variables": {
+                        "timerid": {
+                            "type": "json_rpc"
+                        },
+                        "properties": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "PVR.GetTimerDetails",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieves the details of a specific timer",
+                    "method": "POST"
+                },
+                "GetBroadcastDetails": {
+                    "variables": {
+                        "properties": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "broadcastid": {
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "PVR.GetBroadcastDetails",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieves the details of a specific broadcast",
+                    "method": "POST"
+                },
+                "GetTimers": {
+                    "variables": {
+                        "properties": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "limits": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "PVR.GetTimers",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieves the timers",
+                    "method": "POST"
+                },
+                "GetChannelGroups": {
+                    "variables": {
+                        "limits": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "channeltype": {
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "PVR.GetChannelGroups",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieves the channel groups for the specified type",
+                    "method": "POST"
+                },
+                "GetProperties": {
+                    "variables": {
+                        "properties": {
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "PVR.GetProperties",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieves the values of the given properties",
+                    "method": "POST"
+                },
+                "GetChannelGroupDetails": {
+                    "variables": {
+                        "channels": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "channelgroupid": {
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "PVR.GetChannelGroupDetails",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieves the details of a specific channel group",
+                    "method": "POST"
+                },
+                "Scan": {
+                    "variables": {
+                        "method": {
+                            "value": "PVR.Scan",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Starts a channel scan",
+                    "method": "POST"
+                },
+                "GetChannels": {
+                    "variables": {
+                        "properties": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "limits": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "channelgroupid": {
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "PVR.GetChannels",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieves the channel list",
+                    "method": "POST"
+                }
+            }
+        },
+        "Input": {
+            "actions": {
+                "ContextMenu": {
+                    "variables": {
+                        "method": {
+                            "value": "Input.ContextMenu",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Shows the context menu",
+                    "method": "POST"
+                },
+                "ShowOSD": {
+                    "variables": {
+                        "method": {
+                            "value": "Input.ShowOSD",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Show the on-screen display for the current player",
+                    "method": "POST"
+                },
+                "Info": {
+                    "variables": {
+                        "method": {
+                            "value": "Input.Info",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Shows the information dialog",
+                    "method": "POST"
+                },
+                "Back": {
+                    "variables": {
+                        "method": {
+                            "value": "Input.Back",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Goes back in GUI",
+                    "method": "POST"
+                },
+                "Home": {
+                    "variables": {
+                        "method": {
+                            "value": "Input.Home",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Goes to home window in GUI",
+                    "method": "POST"
+                },
+                "SendText": {
+                    "variables": {
+                        "done": {
+                            "optional": true,
+                            "value": true,
+                            "type": "json_rpc",
+                            "description": "Whether this is the whole input or not (closes an open input dialog if true)."
+                        },
+                        "text": {
+                            "type": "json_rpc",
+                            "description": "Unicode text"
+                        },
+                        "method": {
+                            "value": "Input.SendText",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Send a generic (unicode) text",
+                    "method": "POST"
+                },
+                "Select": {
+                    "variables": {
+                        "method": {
+                            "value": "Input.Select",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Select current item in GUI",
+                    "method": "POST"
+                },
+                "ShowCodec": {
+                    "variables": {
+                        "method": {
+                            "value": "Input.ShowCodec",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Show codec information of the playing item",
+                    "method": "POST"
+                },
+                "Right": {
+                    "variables": {
+                        "method": {
+                            "value": "Input.Right",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Navigate right in GUI",
+                    "method": "POST"
+                },
+                "Down": {
+                    "variables": {
+                        "method": {
+                            "value": "Input.Down",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Navigate down in GUI",
+                    "method": "POST"
+                },
+                "ExecuteAction": {
+                    "variables": {
+                        "action": {
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "Input.ExecuteAction",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Execute a specific action",
+                    "method": "POST"
+                },
+                "Left": {
+                    "variables": {
+                        "method": {
+                            "value": "Input.Left",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Navigate left in GUI",
+                    "method": "POST"
+                },
+                "Up": {
+                    "variables": {
+                        "method": {
+                            "value": "Input.Up",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Navigate up in GUI",
+                    "method": "POST"
+                }
+            }
+        },
+        "JSONRPC": {
+            "actions": {
+                "Introspect": {
+                    "variables": {
+                        "getdescriptions": {
+                            "optional": true,
+                            "value": true,
+                            "type": "json_rpc"
+                        },
+                        "getmetadata": {
+                            "optional": true,
+                            "value": false,
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "JSONRPC.Introspect",
+                            "type": "json_rpc"
+                        },
+                        "filter": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "filterbytransport": {
+                            "optional": true,
+                            "value": true,
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Enumerates all actions and descriptions",
+                    "method": "POST"
+                },
+                "Ping": {
+                    "variables": {
+                        "method": {
+                            "value": "JSONRPC.Ping",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Ping responder",
+                    "method": "POST"
+                },
+                "NotifyAll": {
+                    "variables": {
+                        "message": {
+                            "type": "json_rpc"
+                        },
+                        "data": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "sender": {
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "JSONRPC.NotifyAll",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Notify all other connected clients",
+                    "method": "POST"
+                },
+                "Permission": {
+                    "variables": {
+                        "method": {
+                            "value": "JSONRPC.Permission",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieve the clients permissions",
+                    "method": "POST"
+                },
+                "Version": {
+                    "variables": {
+                        "method": {
+                            "value": "JSONRPC.Version",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieve the JSON-RPC protocol version.",
+                    "method": "POST"
+                }
+            }
+        },
+        "XBMC": {
+            "actions": {
+                "GetInfoBooleans": {
+                    "variables": {
+                        "method": {
+                            "value": "XBMC.GetInfoBooleans",
+                            "type": "json_rpc"
+                        },
+                        "booleans": {
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieve info booleans about Kodi and the system",
+                    "method": "POST"
+                },
+                "GetInfoLabels": {
+                    "variables": {
+                        "labels": {
+                            "type": "json_rpc",
+                            "description": "See http://kodi.wiki/view/InfoLabels for a list of possible info labels"
+                        },
+                        "method": {
+                            "value": "XBMC.GetInfoLabels",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieve info labels about Kodi and the system",
+                    "method": "POST"
+                }
+            }
+        },
+        "AudioLibrary": {
+            "actions": {
+                "GetAlbums": {
+                    "variables": {
+                        "properties": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "includesingles": {
+                            "optional": true,
+                            "value": false,
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "AudioLibrary.GetAlbums",
+                            "type": "json_rpc"
+                        },
+                        "filter": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "limits": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "sort": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieve all albums from specified artist or genre",
+                    "method": "POST"
+                },
+                "GetArtistDetails": {
+                    "variables": {
+                        "properties": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "artistid": {
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "AudioLibrary.GetArtistDetails",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieve details about a specific artist",
+                    "method": "POST"
+                },
+                "GetSongs": {
+                    "variables": {
+                        "properties": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "includesingles": {
+                            "optional": true,
+                            "value": true,
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "AudioLibrary.GetSongs",
+                            "type": "json_rpc"
+                        },
+                        "filter": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "limits": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "sort": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieve all songs from specified album, artist or genre",
+                    "method": "POST"
+                },
+                "SetSongDetails": {
+                    "variables": {
+                        "year": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "album": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "musicbrainzartistid": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "comment": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "rating": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "AudioLibrary.SetSongDetails",
+                            "type": "json_rpc"
+                        },
+                        "musicbrainzalbumartistid": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "track": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "musicbrainztrackid": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "musicbrainzalbumid": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "genre": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "albumartist": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "playcount": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "duration": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "artist": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "lastplayed": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "title": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "songid": {
+                            "type": "json_rpc"
+                        },
+                        "disc": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Update the given song with the given details",
+                    "method": "POST"
+                },
+                "Scan": {
+                    "variables": {
+                        "showdialogs": {
+                            "optional": true,
+                            "value": true,
+                            "type": "json_rpc",
+                            "description": "Whether or not to show the progress bar or any other GUI dialog"
+                        },
+                        "method": {
+                            "value": "AudioLibrary.Scan",
+                            "type": "json_rpc"
+                        },
+                        "directory": {
+                            "optional": true,
+                            "value": "",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Scans the audio sources for new library items",
+                    "method": "POST"
+                },
+                "GetGenres": {
+                    "variables": {
+                        "properties": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "sort": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "limits": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "AudioLibrary.GetGenres",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieve all genres",
+                    "method": "POST"
+                },
+                "Export": {
+                    "variables": {
+                        "options": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "AudioLibrary.Export",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Exports all items from the audio library",
+                    "method": "POST"
+                },
+                "GetArtists": {
+                    "variables": {
+                        "properties": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "albumartistsonly": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc",
+                            "description": "Whether or not to include artists only appearing in compilations. If the parameter is not passed or is passed as null the GUI setting will be used"
+                        },
+                        "method": {
+                            "value": "AudioLibrary.GetArtists",
+                            "type": "json_rpc"
+                        },
+                        "filter": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "limits": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "sort": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieve all artists",
+                    "method": "POST"
+                },
+                "GetRecentlyAddedSongs": {
+                    "variables": {
+                        "properties": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "sort": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "limits": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "albumlimit": {
+                            "optional": true,
+                            "value": -1,
+                            "type": "json_rpc",
+                            "description": "The amount of recently added albums from which to return the songs"
+                        },
+                        "method": {
+                            "value": "AudioLibrary.GetRecentlyAddedSongs",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieve recently added songs",
+                    "method": "POST"
+                },
+                "GetRecentlyPlayedSongs": {
+                    "variables": {
+                        "properties": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "sort": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "limits": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "AudioLibrary.GetRecentlyPlayedSongs",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieve recently played songs",
+                    "method": "POST"
+                },
+                "GetSongDetails": {
+                    "variables": {
+                        "properties": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "songid": {
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "AudioLibrary.GetSongDetails",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieve details about a specific song",
+                    "method": "POST"
+                },
+                "SetAlbumDetails": {
+                    "variables": {
+                        "year": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "style": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "AudioLibrary.SetAlbumDetails",
+                            "type": "json_rpc"
+                        },
+                        "albumlabel": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "rating": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "albumid": {
+                            "type": "json_rpc"
+                        },
+                        "theme": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "type": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "genre": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "mood": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "description": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "artist": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "title": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Update the given album with the given details",
+                    "method": "POST"
+                },
+                "GetRecentlyAddedAlbums": {
+                    "variables": {
+                        "properties": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "sort": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "limits": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "AudioLibrary.GetRecentlyAddedAlbums",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieve recently added albums",
+                    "method": "POST"
+                },
+                "GetAlbumDetails": {
+                    "variables": {
+                        "properties": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "albumid": {
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "AudioLibrary.GetAlbumDetails",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieve details about a specific album",
+                    "method": "POST"
+                },
+                "SetArtistDetails": {
+                    "variables": {
+                        "style": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "died": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "AudioLibrary.SetArtistDetails",
+                            "type": "json_rpc"
+                        },
+                        "born": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "yearsactive": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "artistid": {
+                            "type": "json_rpc"
+                        },
+                        "genre": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "mood": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "description": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "disbanded": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "artist": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "formed": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        },
+                        "instrument": {
+                            "optional": true,
+                            "value": null,
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Update the given artist with the given details",
+                    "method": "POST"
+                },
+                "Clean": {
+                    "variables": {
+                        "showdialogs": {
+                            "optional": true,
+                            "value": true,
+                            "type": "json_rpc",
+                            "description": "Whether or not to show the progress bar or any other GUI dialog"
+                        },
+                        "method": {
+                            "value": "AudioLibrary.Clean",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Cleans the audio library from non-existent items",
+                    "method": "POST"
+                },
+                "GetRecentlyPlayedAlbums": {
+                    "variables": {
+                        "properties": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "sort": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "limits": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "AudioLibrary.GetRecentlyPlayedAlbums",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieve recently played albums",
+                    "method": "POST"
+                }
+            }
+        },
+        "Playlist": {
+            "actions": {
+                "Clear": {
+                    "variables": {
+                        "playlistid": {
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "Playlist.Clear",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Clear playlist",
+                    "method": "POST"
+                },
+                "Insert": {
+                    "variables": {
+                        "item": {
+                            "type": "json_rpc"
+                        },
+                        "position": {
+                            "type": "json_rpc"
+                        },
+                        "playlistid": {
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "Playlist.Insert",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Insert item(s) into playlist. Does not work for picture playlists (aka slideshows).",
+                    "method": "POST"
+                },
+                "GetProperties": {
+                    "variables": {
+                        "properties": {
+                            "type": "json_rpc"
+                        },
+                        "playlistid": {
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "Playlist.GetProperties",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieves the values of the given properties",
+                    "method": "POST"
+                },
+                "Remove": {
+                    "variables": {
+                        "position": {
+                            "type": "json_rpc"
+                        },
+                        "playlistid": {
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "Playlist.Remove",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Remove item from playlist. Does not work for picture playlists (aka slideshows).",
+                    "method": "POST"
+                },
+                "Add": {
+                    "variables": {
+                        "item": {
+                            "type": "json_rpc"
+                        },
+                        "playlistid": {
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "Playlist.Add",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Add item(s) to playlist",
+                    "method": "POST"
+                },
+                "GetItems": {
+                    "variables": {
+                        "properties": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "sort": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "limits": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "playlistid": {
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "Playlist.GetItems",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Get all items from playlist",
+                    "method": "POST"
+                },
+                "GetPlaylists": {
+                    "variables": {
+                        "method": {
+                            "value": "Playlist.GetPlaylists",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Returns all existing playlists",
+                    "method": "POST"
+                },
+                "Swap": {
+                    "variables": {
+                        "position2": {
+                            "type": "json_rpc"
+                        },
+                        "position1": {
+                            "type": "json_rpc"
+                        },
+                        "playlistid": {
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "Playlist.Swap",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Swap items in the playlist. Does not work for picture playlists (aka slideshows).",
+                    "method": "POST"
+                }
+            }
+        },
+        "Files": {
+            "actions": {
+                "GetSources": {
+                    "variables": {
+                        "sort": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "media": {
+                            "type": "json_rpc"
+                        },
+                        "limits": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "Files.GetSources",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Get the sources of the media windows",
+                    "method": "POST"
+                },
+                "GetDirectory": {
+                    "variables": {
+                        "properties": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "Files.GetDirectory",
+                            "type": "json_rpc"
+                        },
+                        "sort": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "media": {
+                            "optional": true,
+                            "value": "files",
+                            "type": "json_rpc"
+                        },
+                        "limits": {
+                            "optional": true,
+                            "type": "json_rpc",
+                            "description": "Limits are applied after getting the directory content thus retrieval is not faster when they are applied."
+                        },
+                        "directory": {
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Get the directories and files in the given directory",
+                    "method": "POST"
+                },
+                "GetFileDetails": {
+                    "variables": {
+                        "properties": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "media": {
+                            "optional": true,
+                            "value": "files",
+                            "type": "json_rpc"
+                        },
+                        "file": {
+                            "type": "json_rpc",
+                            "description": "Full path to the file"
+                        },
+                        "method": {
+                            "value": "Files.GetFileDetails",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Get details for a specific file",
+                    "method": "POST"
+                },
+                "PrepareDownload": {
+                    "variables": {
+                        "method": {
+                            "value": "Files.PrepareDownload",
+                            "type": "json_rpc"
+                        },
+                        "path": {
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Provides a way to download a given file (e.g. providing an URL to the real file location)",
+                    "method": "POST"
+                }
+            }
+        },
+        "Addons": {
+            "actions": {
+                "GetAddonDetails": {
+                    "variables": {
+                        "properties": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "addonid": {
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "Addons.GetAddonDetails",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Gets the details of a specific addon",
+                    "method": "POST"
+                },
+                "GetAddons": {
+                    "variables": {
+                        "content": {
+                            "optional": true,
+                            "value": "unknown",
+                            "type": "json_rpc",
+                            "description": "Content provided by the addon. Only considered for plugins and scripts."
+                        },
+                        "properties": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "type": {
+                            "optional": true,
+                            "value": "unknown",
+                            "type": "json_rpc"
+                        },
+                        "enabled": {
+                            "optional": true,
+                            "value": "all",
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "Addons.GetAddons",
+                            "type": "json_rpc"
+                        },
+                        "limits": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Gets all available addons",
+                    "method": "POST"
+                },
+                "SetAddonEnabled": {
+                    "variables": {
+                        "addonid": {
+                            "type": "json_rpc"
+                        },
+                        "enabled": {
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "Addons.SetAddonEnabled",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Enables/Disables a specific addon",
+                    "method": "POST"
+                },
+                "ExecuteAddon": {
+                    "variables": {
+                        "wait": {
+                            "optional": true,
+                            "value": false,
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "Addons.ExecuteAddon",
+                            "type": "json_rpc"
+                        },
+                        "addonid": {
+                            "type": "json_rpc"
+                        },
+                        "params": {
+                            "optional": true,
+                            "value": "",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Executes the given addon with the given parameters (if possible)",
+                    "method": "POST"
+                }
+            }
+        },
+        "Profiles": {
+            "actions": {
+                "GetCurrentProfile": {
+                    "variables": {
+                        "properties": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "Profiles.GetCurrentProfile",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieve the current profile",
+                    "method": "POST"
+                },
+                "LoadProfile": {
+                    "variables": {
+                        "prompt": {
+                            "optional": true,
+                            "value": false,
+                            "type": "json_rpc",
+                            "description": "Prompt for password"
+                        },
+                        "method": {
+                            "value": "Profiles.LoadProfile",
+                            "type": "json_rpc"
+                        },
+                        "password": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "profile": {
+                            "type": "json_rpc",
+                            "description": "Profile name"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Load the specified profile",
+                    "method": "POST"
+                },
+                "GetProfiles": {
+                    "variables": {
+                        "properties": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "sort": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "limits": {
+                            "optional": true,
+                            "type": "json_rpc"
+                        },
+                        "method": {
+                            "value": "Profiles.GetProfiles",
+                            "type": "json_rpc"
+                        }
+                    },
+                    "endpoint": "SingleEndpoint",
+                    "description": "Retrieve all profiles",
+                    "method": "POST"
+                }
+            }
+        }
+    },
+    "variables": {
+        "json_rpc": {
+            "value": "2.0",
+            "type": "json_rpc"
+        },
+        "port": {
+            "type": "url_replacement"
+        },
+        "hostname": {
+            "type": "url_replacement"
+        }
+    },
+    "root": "http://{hostname}:{port}",
+    "endpoints": {
+        "SingleEndpoint": {
+            "methods": [
+                "POST"
+            ],
+            "path": "/jsonrpc"
+        }
+    },
+    "variable_settings": {
+        "default_type": "json_rpc",
+        "custom_types": {
+            "json_rpc": {
+                "description": "Takes all vars and puts them in a body JSON object"
+            }
+        }
+    }
+}
