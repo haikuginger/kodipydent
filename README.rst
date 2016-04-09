@@ -30,6 +30,13 @@ Simple as that. beekeeper makes it easy to use and easy to learn; if you don't k
     
 and you'll get a printout of all the methods available, and all the variables each one takes.
 
+Installation
+------------
+
+.. code:: bash
+
+    $ pip install kodipydent
+
 Under the Hood
 --------------
 
