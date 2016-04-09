@@ -50,5 +50,5 @@ def random_id_gen():
 
 def Kodi(hostname, port=8080):
     get_rpc = API(base_hive, hostname=hostname, port=port)
-    hive = rpctohive.Hive(get_rpc.API.get())
+    hive = Hive(get_rpc.API.get())
     return API(hive, hostname=hostname, port=port, request_id=random_id_gen)
