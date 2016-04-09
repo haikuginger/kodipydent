@@ -19,7 +19,7 @@ How?
 .. code:: python
 
     >>> from kodipydent import Kodi
-    >>> my_kodi = Kodi(192.168.1.1)
+    >>> my_kodi = Kodi('192.168.1.1')
     >>> movies = my_kodi.VideoLibrary.GetMovies()
 
 Simple as that. beekeeper makes it easy to use and easy to learn; if you don't know the name of the method you want to use, just do this:
