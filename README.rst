@@ -46,4 +46,13 @@ Here's the full signature of the method to create your API:
 
 .. code:: python
 
-    Kodi(hostname[, port=8080])
+    Kodi(hostname[, port=8080, username='kodi', password=None])
+
+"Advanced" Usage
+----------------
+
+kodipydent supports Kodi installations that have usernames and passwords set up. If you've created a password for web access, then simply construct your kodipydent instance as follows:
+
+.. code:: python
+
+    Kodi('localhost', username='kodi', password='myawesomepassword')

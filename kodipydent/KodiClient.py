@@ -12,6 +12,14 @@ base_hive = {
         },
         'port': {
             'type': 'url_replacement'
+        },
+        'username': {
+            'type': 'http_basic_auth',
+            'optional': True,
+        },
+        'password': {
+            'type': 'http_basic_auth',
+            'optional': True
         }
     },
     'endpoints': {
@@ -48,7 +56,14 @@ def rpc_hander(rq, method, jsonrpc, request_id, **values):
 def random_id_gen():
     return uuid.uuid4().hex
 
-def Kodi(hostname, port=8080):
-    get_rpc = API(base_hive, hostname=hostname, port=port)
+def Kodi(hostname, username='kodi', password=None, port=8080):
+    get_rpc = API(base_hive, hostname=hostname, port=port, username=username, password=password)
     hive = Hive(get_rpc.API.get())
-    return API(hive, hostname=hostname, port=port, request_id=random_id_gen)
+    return API(
+        hive,
+        hostname=hostname,
+        port=port,
+        username=username,
+        password=password,
+        request_id=random_id_gen
+    )
