@@ -28,6 +28,14 @@ class Hive(dict):
             },
             'request_id': {
                 'type': 'json_rpc'
+            },
+            'username': {
+                'type': 'http_basic_auth',
+                'optional': True,
+            },
+            'password': {
+                'type': 'http_basic_auth',
+                'optional': True
             }
         }
         for name, method in rpc['methods'].items():
