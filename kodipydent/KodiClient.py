@@ -20,18 +20,34 @@ base_hive = {
         'password': {
             'type': 'http_basic_auth',
             'optional': True
+        },
+        'jsonrpc': {
+            'value': '2.0',
+            'type': 'json_rpc'
+        },
+        'request_id': {
+            'type': 'json_rpc'
         }
     },
     'endpoints': {
         'rpc': {
             'path': '/jsonrpc',
+            'methods': ['POST']
         }
     },
     'objects': {
         'API': {
             'actions': {
                 'get': {
-                    'endpoint': 'rpc'
+                    'endpoint': 'rpc',
+                    'method': 'POST',
+                    'traverse': ['result'],
+                    'variables': {
+                        'method': {
+                            'value': 'JSONRPC.Introspect',
+                            'type': 'json_rpc'
+                        }
+                    }
                 }
             }
         }
@@ -57,7 +73,7 @@ def random_id_gen():
     return uuid.uuid4().hex
 
 def Kodi(hostname, username='kodi', password=None, port=8080):
-    get_rpc = API(base_hive, hostname=hostname, port=port, username=username, password=password)
+    get_rpc = API(base_hive, hostname=hostname, port=port, username=username, password=password, request_id=random_id_gen())
     hive = Hive(get_rpc.API.get())
     return API(
         hive,
