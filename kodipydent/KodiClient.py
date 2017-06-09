@@ -73,7 +73,14 @@ def random_id_gen():
     return uuid.uuid4().hex
 
 def Kodi(hostname, username='kodi', password=None, port=8080):
-    get_rpc = API(base_hive, hostname=hostname, port=port, username=username, password=password, request_id=random_id_gen())
+    get_rpc = API(
+        base_hive,
+        hostname=hostname,
+        port=port,
+        username=username,
+        password=password,
+        request_id=random_id_gen
+    )
     hive = Hive(get_rpc.API.get())
     return API(
         hive,
