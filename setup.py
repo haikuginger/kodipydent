@@ -8,7 +8,7 @@ with open('requirements.txt') as req_file:
 
 setup(
     name = "kodipydent",
-    version = "0.2",
+    version = "0.3",
     packages = ['kodipydent'],
     author = "Jesse Shapiro",
     author_email = "jesse@jesseshapiro.net",
